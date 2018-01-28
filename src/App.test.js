@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import {mount} from 'enzyme'
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+Enzyme.configure({ adapter: new Adapter() });
+
+it('display "Contacts"', () => {
+    const wrapper = mount(<App/>);
+    expect(wrapper.text()).toContain('Contacts')
+})
