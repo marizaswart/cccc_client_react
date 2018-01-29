@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactCard from './ContactCard';
+import PlantCard from './PlantCard';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {mount} from 'enzyme'

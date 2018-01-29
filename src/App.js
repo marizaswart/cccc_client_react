@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import ContactCard from './components/ContactCard';
+import PlantCard from './components/PlantCard';
 
 class App extends Component {
     constructor(props) {
@@ -24,14 +24,14 @@ class App extends Component {
 
     render() {
         let collection = this.state.collection;
-        const contactsList = collection.map(contact => {
-            return <ContactCard key={contact.id} contact={contact}/>;
+        const plantsList = collection.map(plant => {
+            return <PlantCard key={plant.id} plant={plant}/>;
         });
 
         return (
             <div className="container">
                 <h1>Plants</h1>
-                {contactsList}
+                {plantsList}
             </div>
         )
     }
