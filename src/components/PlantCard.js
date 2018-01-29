@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class PlantCard extends Component {
 
     render() {
-        const plant = this.props.plants.attributes;
+        const plant = this.props.plant.attributes;
         return (
             <div className="card">
                 <div className="content">

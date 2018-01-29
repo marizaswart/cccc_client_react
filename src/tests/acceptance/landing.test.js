@@ -12,14 +12,14 @@ describe('When visiting the homepage', function () {
     it('displays header', async () => {
         let text = await page.evaluate(() => document.body.textContent)
             .end();
-        expect(text).toContain('Contacts')
+        expect(text).toContain('Plants')
     })
 
 
-    it('displays contact cards', async () => {
+    it('displays plant cards', async () => {
         let text = await page.evaluate(() => document.body.textContent)
             .end();
-        expect(text).toContain('Thomas Ochman')
+        expect(text).toContain('Aloe Vera')
     })
 
 })
