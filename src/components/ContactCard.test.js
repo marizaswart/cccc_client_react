@@ -7,33 +7,25 @@ import {mount} from 'enzyme'
 
 Enzyme.configure({ adapter: new Adapter() });
 
-let wrapper, contact;
+let wrapper, plant;
 
-describe('<ContactCard />', ()=>{
+describe('<PlantCard />', ()=>{
     beforeEach(() => {
-        contact = {
+        plant = {
             attributes: {
-                name: 'Thomas',
-                location: 'Gothenburg',
-                image: 'http://example.com',
-                twitter: 'thomasochman',
-                role: 'Developer'
-
+                name: 'Aloe Vera',
+                description: 'The Aloe Vera plant (succulent type) is well known for offering possible health and beauty benefits. This succulent is a tough species that is very easy to care for and rarely presents problems for most growers.',
             }
         };
-        wrapper = mount(<ContactCard contact={contact}/>);
+        wrapper = mount(<PlantCard plant={plant}/>);
     });
 
-    it('displays contact name', () => {
-        expect(wrapper.text()).toContain('Thomas');
+    it('displays plant name', () => {
+        expect(wrapper.text()).toContain('Aloe Vera');
     });
 
-    it('displays contact location', () => {
-        expect(wrapper.text()).toContain('Gothenburg')
-    });
-
-    it('displays contact twitter', () => {
-        expect(wrapper.text()).toContain('@thomasochman')
+    it('displays plant description', () => {
+        expect(wrapper.text()).toContain('The Aloe Vera plant (succulent type) is well known for offering possible health and beauty benefits. This succulent is a tough species that is very easy to care for and rarely presents problems for most growers.')
     });
 
 });

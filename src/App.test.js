@@ -7,7 +7,7 @@ import App from './App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('display "Contacts"', () => {
+it('display "Plants"', () => {
     const wrapper = mount(<App/>);
-    expect(wrapper.text()).toContain('Contacts')
+    expect(wrapper.text()).toContain('Plants')
 })

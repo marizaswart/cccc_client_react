@@ -13,10 +13,11 @@ class App extends Component {
     }
 
     getJson() {
-        fetch('https://ca-address-book.herokuapp.com/api/contacts')
+        fetch('https://planted-api.herokuapp.com/api/v1/plants')
             .then(response => response.json())
             .then(response => {
                 this.setState({collection: response.data});
+                console.log(response.data)
             })
             .catch(err => console.error(err.toString()))
     }
@@ -29,7 +30,7 @@ class App extends Component {
 
         return (
             <div className="container">
-                <h1>Contacts</h1>
+                <h1>Plants</h1>
                 {contactsList}
             </div>
         )
