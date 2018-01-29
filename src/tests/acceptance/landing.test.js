@@ -1,5 +1,5 @@
 import nightmare from 'nightmare'
-
+jest.mock(‘../request’)
 describe('When visiting the homepage', function () {
 
 
